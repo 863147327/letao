@@ -1,0 +1,95 @@
+@import "base.less";
+
+#main {
+    .cart-list {
+        .mui-table-view-cell {
+            &:after {
+                left: 0;
+            }
+        }
+        .product {
+            .mui-pull-left {
+                img {
+                    max-width: .8rem;
+                    height: .8rem;
+                }
+                .mui-checkbox {
+                    text-align: center;
+                    input {
+                        position: static;
+                        width: auto;
+                        height: auto;
+                        &::before {
+                            font-size: .2rem;
+                        }
+                    }
+                }
+            }
+            .mui-media-body {
+                .product-name {
+                    white-space: normal;
+                    line-height: .24rem;
+                    color: #666;
+                }
+                .product-price {
+                    line-height: .24rem;
+                    span {
+                        font-weight: 600;
+                        color: red;
+                    }
+                    del {
+                        color: #ccc;
+                    }
+                }
+                .product-params {
+                    margin-top: .05rem;
+                    display: flex;
+                    justify-content: space-between;
+                    line-height: .24rem;
+                    color: #000;
+                }
+            }
+            &:after {
+                right: .05rem;
+            }
+        }
+        .mui-media:after {
+            left: 0;
+        }
+    }
+    .mui-scrollbar {
+        width: 0;
+        height: 0;
+    }
+}
+
+// 订单区域
+#order {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: .34rem;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    .order-count {
+        padding-left: .2rem;
+        color: red;
+        font-weight: 600;
+    }
+}
+.mui-popup {
+    .mui-table-view {
+        .mui-table-view-cell{
+            padding: .1rem 0;
+            .product-size {
+                text-align: left;
+                line-height: .34rem;
+                
+                .btn-size {
+                    margin-bottom: .05rem;
+                }
+            }
+        }
+    }
+    
+}

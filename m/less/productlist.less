@@ -1,0 +1,91 @@
+@import "base.less";
+
+#main {
+
+    /* 搜索表单的公共样式 */
+    .search-form {
+        display: flex;
+        padding: .1rem;
+        height: .54rem;
+
+        input {
+            flex: 1;
+            height: .34rem;
+            border: 1px solid @main-color;
+            background-color: #fff;
+            text-align: left;
+            font-size: .14rem;
+            border-radius: .06rem 0px 0px .06rem;
+            margin-bottom: 0;
+        }
+
+        button {
+            width: .6rem;
+            height: .34rem;
+            border-radius: 0 .06rem .06rem 0px;
+            background-color: @main-color;
+            border-color: @main-color;
+            border-left: 0;
+        }
+    }
+
+    .product-list {
+        .mui-card-header {
+            a {
+                color: #666;
+                font-size: .14rem;
+
+                &.active {
+                    color: red;
+                }
+            }
+        }
+
+        .mui-card-content {
+            .mui-row {
+                >div {
+                    &:nth-child(odd) {
+                        padding-right: .05rem;
+                    }
+
+                    &:nth-child(even) {
+                        padding-left: .05rem;
+                    }
+
+                    .product {
+                        margin-top: .1rem;
+                        padding-bottom: .1rem;
+                        border: 1px solid #ccc;
+                        text-align: center;
+
+                        .product-img {
+                            width: 100%;
+                        }
+
+                        .product-name {
+                            line-height: .18rem;
+
+                            -webkit-line-clamp: 2; //设置行数，2行显示
+                            display: -webkit-box; //盒子模型
+                            -webkit-box-orient: vertical; //元素的排列方式，垂直居中
+                            overflow: hidden; //隐藏溢出内容
+                            text-overflow: ellipsis;
+                          
+                        }
+
+                        .product-price {
+                            span {
+                                color: red;
+                            }
+
+                            del {
+                                color: #ccc;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,112 @@
+
+#main {
+    display: flex;
+    .left {
+        width: 200px;
+        height: 100vh;
+        background-color: #87ceeb;
+        .logo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 250px;
+            img {
+                width: 120px;
+                height: 120px;
+                border: 10px solid #fff;
+                border-radius: 50%;
+                box-shadow: 0 0 6px 0 deeppink;
+            }
+            p {
+                margin-top: 10px;
+            }
+        }
+        .list-group {
+            .list-group-item {
+                background-color: transparent;
+                border-color: transparent;
+                &.active,
+                &:hover {
+                    background-color: #337ab7;
+                    color: #fff;
+
+                }
+            }
+            #collapseExample {
+                .list-group {
+                    padding-left: 30px;
+                }
+            }
+        }
+    }
+    .right {
+        flex: 1;
+
+        #header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            a {
+                line-height: 30px;
+                vertical-align: middle;
+                text-decoration: none;
+                &:before {
+                    font-size: 20px;
+                    vertical-align: middle;
+                }
+            }
+        }
+        #info {
+            padding: 20px;
+            background-color: #f5f5f5;
+            table {
+                text-align: center;
+                // thead {
+                //     tr {
+                //         th,
+                //         td {
+                //             text-align: center;
+                //         }
+                //     }
+                // }
+                // tbody {
+                    tr {
+                        th,
+                        td {
+                            text-align: center;
+                            line-height: 40px;
+                            img {
+                                width: 165px;
+                                height: 85px;
+                            }
+                        }
+                    }
+                // }
+            }
+            .modal {
+                .input-group {
+                    width: 550px;
+                    margin-bottom: 25px;
+                    .input-group-addon {
+                        background-color: #fff;
+                        border: none;
+                        font-weight: 600;
+                        color: black;
+                    }
+                    .form-control {
+                        margin-left: 10px;
+                        border-radius: 5px;
+                    }
+                }
+                img {
+                    display: block;
+                    margin: 0 auto;
+                    width: 180px;
+                    height: 190px;
+                    
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,166 @@
+html {
+  font-size: 26.66667vw;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+img {
+  vertical-align: middle;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-size: .14rem;
+  line-height: .14rem;
+}
+#header {
+  background-color: #006699;
+  display: flex;
+  height: .45rem;
+}
+#header .left {
+  width: .45rem;
+  height: .45rem;
+}
+#header .left a {
+  color: #fff;
+  height: .45rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#header .center {
+  flex: 1;
+}
+#header .center h4 {
+  color: #fff;
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+#header .center form {
+  padding-top: .05rem;
+}
+#header .center form input {
+  background-color: #fff;
+  height: 35px;
+  text-align: left;
+  font-size: .14rem;
+  margin-bottom: 0;
+}
+#header .right {
+  width: .45rem;
+  height: .45rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#header .right a {
+  color: #fff;
+}
+#main {
+  flex: 1;
+  overflow: hidden;
+}
+#main .mui-scroll-wrapper {
+  position: relative;
+  height: 100%;
+  /* 搜索表单的公共样式 */
+}
+#main .mui-scroll-wrapper .search-form {
+  display: flex;
+  padding: .1rem;
+  height: .54rem;
+}
+#main .mui-scroll-wrapper .search-form input {
+  flex: 1;
+  height: .34rem;
+  border: 1px solid #006699;
+  background-color: #fff;
+  text-align: left;
+  font-size: .14rem;
+  border-radius: .06rem 0px 0px .06rem;
+  margin-bottom: 0;
+}
+#main .mui-scroll-wrapper .search-form button {
+  width: .6rem;
+  height: .34rem;
+  border-radius: 0 .06rem .06rem 0px;
+  background-color: #006699;
+  border-color: #006699;
+  border-left: 0;
+}
+/* 底部公共的样式 */
+#footer {
+  background-color: #006699;
+  height: .45rem;
+}
+#footer .mui-row > div a {
+  height: .45rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#footer .mui-row > div a.active {
+  color: orange;
+}
+#footer .mui-row > div a i {
+  display: block;
+}
+#footer .mui-row > div a span {
+  display: block;
+}
+#main #slider .slider-img {
+  max-height: 3rem;
+}
+#main #slider .slider-img a {
+  height: 100%;
+}
+#main #slider .slider-img a img {
+  height: 100%;
+}
+#main .product-detail .product-name {
+  line-height: .2rem;
+}
+#main .product-detail .product-price span {
+  color: red;
+  font-weight: 600;
+}
+#main .product-detail .product-price del {
+  color: #ccc;
+}
+#main .product-detail .product-size {
+  line-height: .34rem;
+}
+#main .product-detail .product-size .btn-size {
+  margin-bottom: .05rem;
+}
+#main .product-detail .mui-table-view-cell:after {
+  left: 0;
+}
+#footer {
+  background-color: #ccc;
+}
+#footer .mui-col-xs-2 {
+  font-size: .2rem;
+  color: #666;
+}
+#footer .mui-col-xs-5 {
+  padding: .06rem;
+}
+#footer .mui-col-xs-5 button {
+  width: 100%;
+}

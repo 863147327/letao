@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="less/search.css">
+</head>
+
+<body>
+
+    <!-- 公共的头部区域 -->
+    <header id="header">
+        <div class="left">
+            <a href="#" class="fa fa-arrow-left"></a>
+        </div>
+        <div class="center">
+            <h4>搜索中心</h4>
+        </div>
+        <div class="right">
+        </div>
+    </header>
+    <!-- 主体区域 -->
+    <main id="main">
+        <!-- 搜索表单 -->
+        <form action="#" class="search-form">
+            <input type="search" placeholder="请输入要搜索的商品" id="input-search">
+            <button type="button" class="mui-btn mui-btn-primary btn-search">搜索</button>
+        </form>
+        <!-- 搜索历史 -->
+        <div class="mui-card search-history">
+            <!--页眉，放置标题-->
+            <div class="mui-card-header">
+                <span>搜索历史</span>
+                <span class="fa fa-trash">清空记录</span>
+            </div>
+            <!--内容区-->
+            <div class="mui-card-content">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <!--这里放置真实显示的DOM内容-->
+                        <ul class="mui-table-view">
+                            <li class="mui-table-view-cell">记录 1
+                                <span class="mui-badge fa fa-close"></span>
+                            </li>
+                            <li class="mui-table-view-cell">记录 2
+                                <span class="mui-badge fa fa-close"></span>
+                            </li>
+                            <li class="mui-table-view-cell">记录 3
+                                <span class="mui-badge fa fa-close"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!--页脚，放置补充信息或支持的操作-->
+            <div class="mui-card-footer">页脚</div>
+        </div>
+    </main>
+
+    <!-- 公共的底部区域 -->
+    <footer id="footer">
+        <!-- mui的栅格和bootstrap一样也是行和列组成 一行最多12列 只有2中屏幕 xs  和 sm  行不需要放容器
+            列 必须放行里面 -->
+        <div class="mui-row">
+            <div class="mui-col-xs-3">
+                <a href="index.html">
+                    <i class="fa fa-home"></i>
+                    <span>首页</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="category.html" class="active">
+                    <i class="fa fa-bars"></i>
+                    <span>分类</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="cart.html">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span>购物车</span>
+                </a>
+            </div>
+            <div class="mui-col-xs-3">
+                <a href="user.html">
+                    <i class="fa fa-user"></i>
+                    <span>个人中心</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script type="text/html" id="tpl">
+        <!-- 判断返回的数据有没有长度 <=0 表示没有数据 -->
+        {{if rows.length <= 0}}
+            <li class="mui-table-view-cell">
+                您的搜索记录空空如也!
+            </li>
+        {{else}}
+            {{ each rows value index}}
+            <li class="mui-table-view-cell">
+                {{ value }}
+                <span class="mui-badge fa fa-close btn-delete" data-index="{{index}}"></span>
+            </li>
+            {{/each}}
+        {{/if}}
+    </script>
+    <script src="lib/mui/js/mui.js"></script>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="js/search.js"></script>
+</body>
+
+</html>

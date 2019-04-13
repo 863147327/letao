@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="less/index.css">
+</head>
+
+<body>
+    <main id="main">
+        <div class="left">
+            <div class="logo">
+                <img src="images/1.png" alt="">
+                <p>王凯旋</p>
+            </div>
+            <div class="list-group">
+                <a href="index.html" class="list-group-item">
+                    用户管理
+                </a>
+                <!-- 用collapse一定要给父盒子设置href="collapseExample"  这样才能关联到-->
+                <a href="#collapseExample" data-toggle="collapse" class="list-group-item active">分类管理</a>
+                <!-- collapse控制显示隐藏 collapse表示隐藏 collapse in 表示显示 -->
+                <div class="collapse in" id="collapseExample">
+                    <div class="list-group">
+                        <a href="firstCategory.html" class="list-group-item">
+                            一级分类
+                        </a>
+                        <a href="secondCategory.html" class="list-group-item">
+                            二级分类
+                        </a>
+                    </div>
+                </div>
+                <a href="#" class="list-group-item">商品管理</a>
+            </div>
+        </div>
+        <div class="right">
+            <header id="header">
+                <a href="#" class="glyphicon glyphicon-th-list"></a>
+                <a href="#" class="glyphicon glyphicon-off exit">退出</a>
+            </header>
+            <section id="info">
+                <!-- 弹窗的按钮 -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">添加分类</button>
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">添加分类</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon2">分类名称</span>
+                                    <input type="text" class="form-control category-name" placeholder="请输入分类名称"
+                                        aria-describedby="sizing-addon2">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                <button type="button" class="btn btn-primary btn-save" data-dismiss="modal">保存</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-hover table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>分类编号</th>
+                            <th>分类名称</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+                <!-- 分页按钮 -->
+                <ul id="page"></ul>
+            </section>
+        </div>
+    </main>
+    <!-- 创建用户信息模板 -->
+    <script type="text/html" id="tpl">
+        {{each rows value}}
+        <tr>
+            <th scope="row"><input type="checkbox"></th>
+            <td>{{value.id}}</td>
+            <td>{{value.categoryName}}</td>
+
+        </tr>
+        {{/each}}
+    </script>
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <!-- 模板引擎包 -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- 分页插件 -->
+    <script src="./lib/bootstrap/js/bootstrap-paginator.js"></script>
+    <!-- 公共样式 -->
+    <script src="js/commont.js"></script>
+    <script src="js/firstCategory.js"></script>
+</body>
+
+</html>

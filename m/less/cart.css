@@ -1,0 +1,198 @@
+html {
+  font-size: 26.66667vw;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+img {
+  vertical-align: middle;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-size: .14rem;
+  line-height: .14rem;
+}
+#header {
+  background-color: #006699;
+  display: flex;
+  height: .45rem;
+}
+#header .left {
+  width: .45rem;
+  height: .45rem;
+}
+#header .left a {
+  color: #fff;
+  height: .45rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#header .center {
+  flex: 1;
+}
+#header .center h4 {
+  color: #fff;
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+#header .center form {
+  padding-top: .05rem;
+}
+#header .center form input {
+  background-color: #fff;
+  height: 35px;
+  text-align: left;
+  font-size: .14rem;
+  margin-bottom: 0;
+}
+#header .right {
+  width: .45rem;
+  height: .45rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#header .right a {
+  color: #fff;
+}
+#main {
+  flex: 1;
+  overflow: hidden;
+}
+#main .mui-scroll-wrapper {
+  position: relative;
+  height: 100%;
+  /* 搜索表单的公共样式 */
+}
+#main .mui-scroll-wrapper .search-form {
+  display: flex;
+  padding: .1rem;
+  height: .54rem;
+}
+#main .mui-scroll-wrapper .search-form input {
+  flex: 1;
+  height: .34rem;
+  border: 1px solid #006699;
+  background-color: #fff;
+  text-align: left;
+  font-size: .14rem;
+  border-radius: .06rem 0px 0px .06rem;
+  margin-bottom: 0;
+}
+#main .mui-scroll-wrapper .search-form button {
+  width: .6rem;
+  height: .34rem;
+  border-radius: 0 .06rem .06rem 0px;
+  background-color: #006699;
+  border-color: #006699;
+  border-left: 0;
+}
+/* 底部公共的样式 */
+#footer {
+  background-color: #006699;
+  height: .45rem;
+}
+#footer .mui-row > div a {
+  height: .45rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#footer .mui-row > div a.active {
+  color: orange;
+}
+#footer .mui-row > div a i {
+  display: block;
+}
+#footer .mui-row > div a span {
+  display: block;
+}
+#main .cart-list .mui-table-view-cell:after {
+  left: 0;
+}
+#main .cart-list .product .mui-pull-left img {
+  max-width: .8rem;
+  height: .8rem;
+}
+#main .cart-list .product .mui-pull-left .mui-checkbox {
+  text-align: center;
+}
+#main .cart-list .product .mui-pull-left .mui-checkbox input {
+  position: static;
+  width: auto;
+  height: auto;
+}
+#main .cart-list .product .mui-pull-left .mui-checkbox input::before {
+  font-size: .2rem;
+}
+#main .cart-list .product .mui-media-body .product-name {
+  white-space: normal;
+  line-height: .24rem;
+  color: #666;
+}
+#main .cart-list .product .mui-media-body .product-price {
+  line-height: .24rem;
+}
+#main .cart-list .product .mui-media-body .product-price span {
+  font-weight: 600;
+  color: red;
+}
+#main .cart-list .product .mui-media-body .product-price del {
+  color: #ccc;
+}
+#main .cart-list .product .mui-media-body .product-params {
+  margin-top: .05rem;
+  display: flex;
+  justify-content: space-between;
+  line-height: .24rem;
+  color: #000;
+}
+#main .cart-list .product:after {
+  right: .05rem;
+}
+#main .cart-list .mui-media:after {
+  left: 0;
+}
+#main .mui-scrollbar {
+  width: 0;
+  height: 0;
+}
+#order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: .34rem;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+#order .order-count {
+  padding-left: .2rem;
+  color: red;
+  font-weight: 600;
+}
+.mui-popup .mui-table-view .mui-table-view-cell {
+  padding: .1rem 0;
+}
+.mui-popup .mui-table-view .mui-table-view-cell .product-size {
+  text-align: left;
+  line-height: .34rem;
+}
+.mui-popup .mui-table-view .mui-table-view-cell .product-size .btn-size {
+  margin-bottom: .05rem;
+}

@@ -1,0 +1,54 @@
+@import "base.less";
+
+#main {
+    #slider {
+        .slider-img {
+            max-height: 3rem;
+            a {
+                height: 100%;
+                img {
+                    height: 100%;
+                }
+            }
+        }
+        
+    }
+    .product-detail {
+        .product-name {
+            line-height: .2rem;
+        }
+        .product-price {
+            span {
+                color: red;
+                font-weight: 600;
+            }
+            del {
+                color: #ccc;
+            }
+        }
+        .product-size {
+            line-height: .34rem;
+            .btn-size {
+                margin-bottom: .05rem;
+            }
+        }
+        .mui-table-view-cell:after {
+            left: 0;
+        }
+    }
+}
+
+// 单独修改底部区域的样式
+#footer {
+    background-color: #ccc;
+    .mui-col-xs-2 {
+        font-size: .2rem;
+        color: #666;
+    }
+    .mui-col-xs-5 {
+        padding: .06rem;
+        button {
+            width: 100%;
+        }
+    }
+}
